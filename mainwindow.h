@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "secondwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,7 +16,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_btn_ok_clicked();
+    void on_btn_clear_clicked();
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+    Secondwindow *Secondwindow;
 };
 #endif // MAINWINDOW_H
